@@ -1,0 +1,49 @@
+
+    body{
+        margin: 0;
+    }
+    h1{
+        font-size:30px;
+        
+        text-align:center;
+        border-bottom:2px solid black;
+        margin:0;
+        padding: 20px;
+    }
+    *
+    {
+      font-family:"나눔손글씨 펜";
+    }
+    ol{
+        border-right: 2px solid black;
+        width: 100px;
+        margin: 0;
+        padding: 20px;
+        height: 400px;
+    }
+    #grid{
+      display:grid;
+      grid-template-columns: 150px 1fr;
+      padding-top: 0px;
+    }
+    #grid ol{
+      padding-left:33px;
+    }
+    .music{
+      padding-left: 25px;
+      text-align: center;
+    }
+    
+    
+    .music {
+        display: inline-block;
+    }
+    /* #image{
+        
+        text-align: center;
+    } */
+    /* @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css); */
+
+.nanumpenscript * {
+ font-family: 'Nanum Pen Script', cursive;
+}

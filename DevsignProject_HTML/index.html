@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRS - Music website for You</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" href="./favicon.png">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap" rel="stylesheet">
+    
+    <!-- BOOTSTRAP -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="../css/main.css">
+    <script>
+        // Initialize Google Map.
+        function initMap() {
+            const myLatLng = {
+            lat: 35.1398,
+            lng: 126.9335
+        }
+        const map = new google.maps.Map(document.getElementById('map'), {
+            center: myLatLng,
+            scrollwheel: false,
+            zoom: 15
+        })
+        const marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'DEVSIGN'
+        })
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTQIlxBn5AfKGvsfJiormAE1esN3fcCkg&callback=initMap" async defer></script>
+</head>
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img class="globe" src="./images/guitar.png"alt="Note">
+
+        <!-- HEADER -->
+        <header>
+            <div class="container d-flex align-items-center py-3">
+                <a class = "logo margin me-2" href="#">
+                    <img src="./images/header-logo.png" alt="Music Logo">
+                </a>
+                <ul class = "nav flex-grow-1">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-black">User Info</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-black">Song For You</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./view_all_music.html" class="nav-link text-black">Popular Song</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-black">How to Use</a>
+                    </li>
+                </ul>
+                <div class="forms d-flex">
+                    <input type="text" class="form-control me-2" placeholder="Looking for...">
+                    <button class="btn btn-link text-light flex-shrink-0 me-2 text-decoration-none">Sign in</button>
+                    <button class="btn btn-outline-light flex-shrink-0" onclick="location.href='SignUp.html' ">Sign up</button>
+                </div>
+                <button class="btn ms-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+                    <img src="./images/menu.svg" alt="Menu Icon">
+                </button>
+                <div class="offcanvas offcanvas-end" id="offcanvas">
+                    <div class="offcanvas-header">
+                        <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="list-group list-group-flush" mb-4>
+                            <li class="list-group-item">
+                                <a href="#">User Info</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Song For You</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">Popular Song</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="#">How to Use</a>
+                            </li>
+                        </ul>
+                        <input type="text" class="form-control mb-2" placeholder="Looking for...">
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-outline-primary">Sign in</button>
+                        </div>
+                        <div class="d-grid">
+                            <button class="btn btn-primary" onclick="location.href='SignUp.html' ">Sign up</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-12">
+                    <div class="headline">
+                        <h1 class="text-black">Join MRS for FREE</h1>
+                        <p class="text-black-50">A number of musics and artists are waiting for you. You can save your taste about music and get recommendations. Join MRS and listen whatever you want.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-5 col-md-6 col-12">
+                    <form>
+                        <input type="text" class="form-control form-control-lg mb-3" placeholder="Username">
+                        <input type="password" class="form-control form-control-lg mb-3" placeholder="Password">
+                        <div class="d-grid">
+                            <button class="btn btn-primary btn-lg">Join MRS</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <img class="curve"src="./images/curve.svg" alt="Curve">
+    </section>
+
+    <!-- YOUTUBE -->
+    <section class="youtube">
+        <div class="container">
+            <img class="astronaut" src="./images/ShinChanMusic.png" alt="Listner">
+            <div class="ratio ratio-16x9">
+                <iframe width="1280" height="720" src="https://www.youtube.com/embed/S_0me7vYyeU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features border-top border-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="card">
+                        <img src="./images/save_info.png" alt="Save" class="card-img-top">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>Save your taste</strong></h5>
+                            <p class="card-text">Save your info and taste about music. Once you sign up, you can log in whenever you want.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="card">
+                        <img src="./images/recommend_list.png" alt="Recommend List">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>Take recommendations</strong></h5>
+                            <p class="card-text">MRS will give you recommendation list based on your taste. Take it and listen new music which you will love.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="card">
+                        <img src="./images/for_free.png" alt="For Free">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>For Free</strong></h5>
+                            <p class="card-text">DO NOT need to pay anything. You can hear whatever you want for free.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="card">
+                        <img src="./images/popular_songs.png" alt="Popular Songs">
+                        <div class="card-body text-center">
+                            <h5 class="card-title"><strong>Other famous music</strong></h5>
+                            <p class="card-text">Want to listen music which is not in recommendation list? You can listen any music in MRS.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="map">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <h1>Where is DEVSIGN?</h1>
+                    <p>Devsign is in Chosun University, located in Gwangju. MRS is created by members of Devsign - Lee Jeongheon, Choi Yunyoung</p>
+                </div>
+                <div class="col-lg-8 col-12">
+                    <div id="map" class="shadow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <img class="curve" src="./images/curve.svg" alt="Curve">
+        <div class="contianer">
+            <img class="illustration" src="./images/footer_last.png" alt="Illustration">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <h5>DEVSIGN - 2021 PROJECT</h5>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5>Language</h5>
+                    <ul class="list-unstyled">
+                        <li><a>Html</a></li>
+                        <li><a>CSS</a></li>
+                        <li><a>Bootstrap</a></li>
+                        <li><a>Java Script</a></li>
+                        <li><a>Java Spring</a></li>
+                        <li><a>Python</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5>Used Tool</h5>
+                        <ul class="list-unstyled">
+                        <li><a>Google API</a></li>
+                        <li><a>Youtube API</a></li>
+                        <li><a>MySQL</a></li>
+                        </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5>FRONT-END</h5>
+                    <ul class="list-unstyled">
+                        <li><a>by CYY</a></li>
+                        <li><a>HTML</a></li>
+                        <li><a>CSS</a></li>
+                        <li><a>Java Script</a></li>
+                        <li><a>Bootstrap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 col-6">
+                    <h5>BACK-END</h5>
+                    <ul class="list-unstyled">
+                        <li><a>by LJH</a></li>
+                        <li><a>Python</a></li>
+                        <li><a>Java Spring</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <ul class="site-links list-unstyled">
+            <li>2021 DEVSIGN</li>
+            <li>PROJECT by - LJH , CYY</a></li>
+        </ul>
+    </footer>
+
+</body>
+</html>
